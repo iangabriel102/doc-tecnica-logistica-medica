@@ -1,0 +1,121 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- Pacotes Básicos ---
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{booktabs} % Para tabelas bonitas
+\usepackage{tabularx} % Tabelas com largura ajustada
+\usepackage{lipsum}   % Para gerar texto de preenchimento (encher as 5 páginas)
+\usepackage{xcolor}   % Para cores nos status
+\usepackage{fancyhdr} % Cabeçalhos e rodapés
+
+% --- Configuração de Cabeçalho ---
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Documentação Técnica Médica}
+\rhead{Controle de Suprimentos}
+\cfoot{\thepage}
+
+\title{\textbf{Relatório Técnico de Gestão de Insumos Médicos}\\ \large Controle de Estoque, Recebimento e Validade}
+\author{Departamento de Logística Hospitalar}
+\date{25 de Março de 2026}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+% --- PÁGINA 1: INTRODUÇÃO ---
+\section{Introdução e Objetivos}
+Este documento estabelece as diretrizes técnicas para o manejo de suprimentos e medicamentos. A rastreabilidade, desde a data de chegada até o consumo final, é o pilar para garantir a segurança do paciente.
+
+\subsection{Importância do Controle de Vencimento}
+O descarte de medicamentos por validade expirada representa uma perda financeira significativa e um risco sanitário. Implementamos aqui o sistema \textbf{PVPS} (Primeiro que Vence, Primeiro que Sai).
+
+\section{Metodologia de Recebimento}
+Todo insumo que chega à unidade deve passar por conferência tripla:
+\begin{enumerate}
+    \item Integridade da embalagem.
+    \item Concordância entre Nota Fiscal e Quantidade Física.
+    \item Registro imediato do lote e validade no sistema central.
+\end{enumerate}
+
+\newpage
+
+% --- PÁGINA 2: TABELAS DE SUPRIMENTOS ---
+\section{Inventário Detalhado: Medicamentos}
+Abaixo, apresenta-se a relação atualizada dos principais fármacos em estoque, com foco nas datas críticas de reposição e expiração.
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+\hline
+\textbf{Medicamento} & \textbf{Qtd.} & \textbf{Chegada} & \textbf{Vencimento} & \textbf{Status} \\ \hline
+Insulina Regular & 500 un & 10/01/2026 & 15/05/2027 & \textcolor{green}{Seguro} \\ \hline
+Amoxicilina 500mg & 1200 cap & 20/02/2026 & 10/11/2026 & \textcolor{orange}{Alerta} \\ \hline
+Morfina 10mg/ml & 50 amp & 05/03/2026 & 20/01/2028 & \textcolor{green}{Seguro} \\ \hline
+Dipirona Sódica & 3000 ml & 15/03/2026 & 14/04/2026 & \textcolor{red}{Crítico} \\ \hline
+Soro Fisiológico & 100 bags & 18/03/2026 & 01/12/2028 & \textcolor{green}{Seguro} \\ \hline
+\end{tabularx}
+\caption{Controle de Estoque e Validade - Setor A1}
+\end{table}
+
+\section{Suprimentos Hospitalares (Descartáveis)}
+Diferente dos remédios, os suprimentos de consumo (como luvas e seringas) possuem maior rotatividade.
+
+\begin{itemize}
+    \item \textbf{Seringas 5ml:} 5.000 unidades (Chegada: 01/03/2026).
+    \item \textbf{Luvas de Procedimento:} 200 caixas (Vencimento Médio: 2029).
+    \item \textbf{Cateteres IV:} 300 unidades (Data de Chegada: 12/03/2026).
+\end{itemize}
+
+\newpage
+
+% --- PÁGINA 3: PROTOCOLOS ---
+\section{Protocolo de Armazenagem e Temperatura}
+Muitos dos medicamentos listados na página anterior exigem controle térmico rigoroso.
+
+\subsection{Cadeia de Frio}
+Os itens com vencimento próximo devem ser movidos para a frente das prateleiras de refrigeração. A temperatura deve ser mantida entre $2^\circ C$ e $8^\circ C$.
+
+\subsection{Fluxo de Reposição}
+A reposição ocorre sempre que o estoque atinge 20\% da capacidade máxima. 
+\lipsum[1-2] % Preenchendo com texto técnico simulado
+
+\newpage
+
+% --- PÁGINA 4: ANÁLISE DE RISCO ---
+\section{Análise de Riscos e Perdas}
+Nesta seção, detalhamos o que acontece quando um medicamento atinge a data de vencimento sem ser utilizado.
+
+\subsection{Segregação de Itens Vencidos}
+Itens vencidos devem ser colocados em caixas vermelhas e lacrados para incineração, conforme a norma RDC 222/2018 da ANVISA.
+
+\subsection{Relatório de Desperdício}
+\lipsum[3-5] % Mais texto para garantir as 5 páginas
+
+\newpage
+
+% --- PÁGINA 5: CONCLUSÃO ---
+\section{Conclusão e Próximos Passos}
+A manutenção desta documentação técnica é vital para a auditoria hospitalar. 
+
+\subsection{Recomendações}
+\begin{itemize}
+    \item Digitalizar todos os canhotos de chegada.
+    \item Realizar contagem física (inventário rotativo) a cada 15 dias.
+    \item Revisar os fornecedores com prazos de entrega superiores a 10 dias.
+\end{itemize}
+
+\vspace{2cm}
+\begin{center}
+\rule{8cm}{0.4pt} \\
+Assinatura do Responsável Técnico \\
+CRF/CRM Ativo
+\end{center}
+
+\end{document}
